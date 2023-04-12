@@ -8,6 +8,9 @@ const dataRouter = require("./routes/data");
 app.set("trust proxy", 1);
 app.use(express.json());
 //routes
+app.get("/", (req, res) => {
+  res.send("Gas data endpoint");
+});
 app.use("/api/v1/gas-data", dataRouter);
 
 const port = process.env.PORT || 3000;
