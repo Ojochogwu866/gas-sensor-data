@@ -9,7 +9,7 @@ const {
   updategasData,
 } = require("../controllers/data");
 
-router.route("/").post(creategasData).get(getgasData);
+router.route("/gas-data").post(creategasData).get(getgasData);
 router
   .route("/:id")
   .get(getgasDataById)

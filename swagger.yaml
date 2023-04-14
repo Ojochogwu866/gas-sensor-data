@@ -1,0 +1,85 @@
+openapi: 3.0.0
+info:
+  title: gas-sensor
+  contact: {}
+  version: "1.0"
+servers:
+  - url: http://ec2-54-159-144-223.compute-1.amazonaws.com:3000/api/v1/gas-data
+    variables: {}
+paths:
+  /gas-data:
+    get:
+      tags:
+        - Misc
+      summary: Get all sensor-data
+      operationId: get-all-sensor-data
+      parameters: []
+      responses:
+        "200":
+          description: ""
+          headers: {}
+      deprecated: false
+    post:
+      tags:
+        - Misc
+      summary: create sensor data
+      operationId: create-sensor-data
+      parameters: []
+      requestBody:
+        description: ""
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/create-sensor-data"
+              example:
+                temperature: 30
+                smoke: 99
+                co: 30
+                humidity: 84
+                lpg: 30
+                latitude: 380
+                longitude: 80
+        required: true
+      responses:
+        "200":
+          description: ""
+          headers: {}
+      deprecated: false
+  /{id}:
+    put:
+      tags:
+        - Misc
+      summary: update sensor data
+      operationId: update-sensor-data
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: integer
+          required: true
+          description: The data id.
+      responses:
+        "200":
+          description: ""
+          headers: {}
+      deprecated: false
+    delete:
+      tags:
+        - Misc
+      summary: delete sensor data
+      operationId: delete-sensor-data
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: integer
+          required: true
+          description: The data id.
+      responses:
+        "200":
+          description: ""
+          headers: {}
+      deprecated: false
+tags:
+  - name: Misc
+    description: ""
