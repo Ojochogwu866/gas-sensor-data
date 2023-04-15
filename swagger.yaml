@@ -34,7 +34,7 @@ paths:
               example:
                 temperature: 30
                 smoke: 99
-                co: 30
+                co: 3ii0
                 humidity: 84
                 lpg: 30
                 latitude: 380

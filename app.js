@@ -18,7 +18,7 @@ app.get("/", (req, res) => {
   res.send('<h1>gas-data-api</h1><a href="/api-docs">Documentation</a>');
 });
 app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(swaggerDocument));
-app.use("/api/v1/gas-data", dataRouter);
+app.use("/api/v1/", dataRouter);
 
 const port = process.env.PORT || 3000;
 const start = async () => {
