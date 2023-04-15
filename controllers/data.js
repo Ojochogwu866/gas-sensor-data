@@ -39,9 +39,9 @@ const creategasData = async (req, res) => {
 const getAllData = async (req, res) => {
   try {
     const { deviceId } = req.params;
-    const gasDataRecords = await GasData.find({ _id: deviceId });
+    const gasData = await GasData.find({ _id: deviceId });
 
-    res.json({ gasDataRecords });
+    res.json({ gasData });
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: "Failed to get gas data records" });
