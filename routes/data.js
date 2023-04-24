@@ -14,4 +14,5 @@ router.route("/data/:deviceId").get(getAllData);
 /*router.route("/data/:deviceId/:dataId").put(updateGasData);
 router.route("/data/:deviceId/:dataId").delete(deleteGasData);
 router.route("/devices/:deviceId").delete(deleteDevice);
-module.exports = router;*/
+*/
+module.exports = router;
