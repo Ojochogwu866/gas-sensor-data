@@ -116,5 +116,5 @@ module.exports = {
   //updateGasData,
   //deleteDevice,
   getAllData,
-  deleteGasData,
+  //deleteGasData,
 };
