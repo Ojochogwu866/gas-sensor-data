@@ -33,89 +33,6 @@ paths:
           description: ""
           headers: {}
       deprecated: false
-  /data/{deviceId}/{dataId}:
-    put:
-      tags:
-        - Misc
-      summary: update sensor data record
-      operationId: updatedata
-      parameters:
-        - name: deviceId
-          in: path
-          description: ""
-          required: true
-          style: simple
-          schema:
-            type: string
-        - name: dataId
-          in: path
-          description: ""
-          required: true
-          style: simple
-          schema:
-            type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: "#/components/schemas/updateSensorData"
-            example:
-              temperature: 30
-              smoke: 99
-              co: 30
-              humidity: 84
-              lpg: 30
-              latitude: 380
-              longitude: 80
-      responses:
-        "200":
-          description: ""
-          headers: {}
-      deprecated: false
-    delete:
-      tags:
-        - Misc
-      summary: Delete Sensor data
-      operationId: Deletegasdata
-      parameters:
-        - name: deviceId
-          in: path
-          description: ""
-          required: true
-          style: simple
-          schema:
-            type: string
-        - name: dataId
-          in: path
-          description: ""
-          required: true
-          style: simple
-          schema:
-            type: string
-      responses:
-        "200":
-          description: ""
-          headers: {}
-      deprecated: false
-  /devices/{deviceId}:
-    delete:
-      tags:
-        - Misc
-      summary: delete sensor device
-      operationId: deletedevice
-      parameters:
-        - name: deviceId
-          in: path
-          description: ""
-          required: true
-          style: simple
-          schema:
-            type: string
-      responses:
-        "200":
-          description: ""
-          headers: {}
-      deprecated: false
   /data/{deviceId}:
     get:
       tags:
@@ -145,24 +62,6 @@ components:
       properties:
         deviceId:
           type: string
-        temperature:
-          type: string
-        humidity:
-          type: string
-        co:
-          type: string
-        lpg:
-          type: string
-        smoke:
-          type: string
-        latitude:
-          type: string
-        longitude:
-          type: string
-    updateSensorData:
-      title: updateSensorData
-      type: object
-      properties:
         temperature:
           type: string
         humidity:
