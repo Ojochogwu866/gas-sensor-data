@@ -48,6 +48,7 @@ const getAllData = async (req, res) => {
   }
 };
 
+/* Deprecated - 4-24/2023
 const deleteDevice = async (req, res) => {
   try {
     const { deviceId } = req.params;
@@ -63,7 +64,7 @@ const deleteDevice = async (req, res) => {
 };
 
 // Update gas data record by dataId
-/* Deprecated - 4-24/2023
+
 const updateGasData = async (req, res) => {
   try {
     const { deviceId } = req.params;
@@ -88,9 +89,7 @@ const updateGasData = async (req, res) => {
     res.status(500).json({ message: "Failed to update gas data record" });
   }
 };
-*/
 
-/* Deprecated - 4-24/2023
 const deleteGasData = async (req, res) => {
   try {
     const { deviceId } = req.params;
